@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+         android:weightSum="3"
+
+         >
+        <TextView
+            android:id="@+id/tv_weatherreport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weather Report"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="10dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tv_background"
+            android:layout_marginTop="10dp"
+
+            android:gravity="center"
+            android:paddingLeft="10dp">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:padding="1dp"
+                android:src="@drawable/ic_weather_cloudy" />
+
+            <TextView
+                android:id="@+id/tv_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="India,  IN"
+                android:layout_below="@+id/imageView"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/tv_country"
+                android:textColor="#fff"
+
+                android:layout_marginTop="10dp"
+                android:text="Clear sky"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tv_background"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/tv_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                android:textSize="28dp"
+                android:textColor="#fff"
+
+                android:textAlignment="center"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_details"
+                android:layout_marginTop="10dp"
+                android:text="Date:"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tv_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_date"
+                android:layout_marginTop="10dp"
+
+                android:textColor="#fff"
+                android:gravity="center"
+                android:text="Temperature"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_pressure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_temp"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:text="Pressure: "
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_wind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pressure"
+                android:layout_marginTop="10dp"
+                android:text="Wind Speed:"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_humidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_wind"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:text="Humidity"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tv_background"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:paddingLeft="10dp">
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/button"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="24dp"
+            android:layout_gravity="center_horizontal"
+            android:onClick="getLocation"
+
+            android:text="Refresh"
+            android:textColor="#fff"
+            android:textStyle="normal"
+            android:background="@color/button_background"/>
+
+
+    </LinearLayout>
+</ScrollView>
+    <TextView
+        android:id="@+id/textView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/ic_launcher_background"
+        android:text="Location"
+        android:textSize="16dp"
+
+        android:layout_gravity="bottom"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/layerl_background"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="8dp"
+
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+
+</FrameLayout>
